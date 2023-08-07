@@ -1,0 +1,28 @@
+1) Quin és el bloc de la memòria principal al que es troba el primer word de Z, i a quin índex de bloc de la memòria cache es correspòn? Indica-ho en hexadecimal.
+Bloc: 0x1001002
+Bloc cache: 0x2
+
+2) En cada iteració del bucle _extern_, quantes fallades de cache hi ha?
+Iteració 1: 3 fallades	
+Iteració 2: 1 fallada
+Iteració 3: 1 fallada
+Iteració 4: 8 fallades
+
+3) Per a cada vector (X, Y i Z) què estem explotant amb la memòria cache, la localitat temporal o espacial? Justifica breument la resposta.
+X: espacial
+Y: espacial
+Z: espacial
+
+Ja que cada vegada que agafem una dada de la memoria, ens empotem tot un bloc(es a dir, ens emportem les dades próximes a la dada que volem). No es la temporal perquè no accedim la mateixa dada més d'un cop.
+4) Quina és la taxa de fallades del programa? Com es calcula?
+Taxa de fallades:  64%
+Com es calcula: Es calcula el total de dades accedides a la memoria, que son 36, i com que abans hem calculat les fallades per iteració, les sumem(3 + 1 + 1 + 8 = 13) i el dividim pel total multiplicat per 100 (23/36 * 100)
+
+5) Tenint en compte el model de temps descrit anteriorment, i que el programa executa un total de 218 instruccions, calcula el temps d'execució del programa amb la cache.
+Texe =  400291,2 ns
+
+6) Si augmentem la mida de bloc com diu l'enunciat a Atenea i mantenim el mateix número de blocs i l'associativitat, quantes fallades de cache hi haurà i quina serà la taxa de fallades?
+Es produira 6 fallades
+Taxa de fallades = 83 %
+
+
